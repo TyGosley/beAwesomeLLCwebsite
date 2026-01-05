@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import PulsatingButton from './PulsatingButton';
 
 function Header({ onButtonClick, isTransformed }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -11,19 +12,19 @@ function Header({ onButtonClick, isTransformed }) {
           <nav className="hidden md:flex gap-6 lg:gap-8">
             <a 
               href="#home" 
-              className="text-black uppercase font-semibold text-sm tracking-wide hover:text-gray-600 transition-colors"
+              className="text-black uppercase font-black text-sm tracking-wide hover:text-gray-600 transition-colors border-8 border-black px-4 py-2 rounded"
             >
               Home
             </a>
             <a 
               href="#projects" 
-              className="text-black uppercase font-semibold text-sm tracking-wide hover:text-gray-600 transition-colors"
+              className="text-black uppercase font-black text-sm tracking-wide hover:text-gray-600 transition-colors border-8 border-black px-4 py-2 rounded"
             >
               Projects
             </a>
             <a 
               href="#contact" 
-              className="text-black uppercase font-semibold text-sm tracking-wide hover:text-gray-600 transition-colors"
+              className="text-black uppercase font-black text-sm tracking-wide hover:text-gray-600 transition-colors border-8 border-black px-4 py-2 rounded"
             >
               Contact
             </a>
@@ -42,23 +43,10 @@ function Header({ onButtonClick, isTransformed }) {
 
           {/* Call-to-Action Button */}
           <div className="flex items-center gap-2 sm:gap-3">
-            <span className="hidden sm:inline text-sm font-medium text-gray-700 uppercase tracking-wide">
+            {/* <span className="hidden sm:inline text-sm font-black text-gray-700 uppercase tracking-wide">
               Explore
-            </span>
-            <button
-              onClick={onButtonClick}
-              disabled={isTransformed}
-              className={`
-                px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-semibold uppercase text-xs sm:text-sm tracking-wide
-                transition-all duration-300
-                ${isTransformed 
-                  ? 'bg-gray-400 text-gray-600 cursor-not-allowed' 
-                  : 'bg-black text-white hover:bg-gray-800 hover:scale-105'
-                }
-              `}
-            >
-              {isTransformed ? 'Transformed' : 'Click Here'}
-            </button>
+            </span> */}
+            <PulsatingButton onClick={onButtonClick} isTransformed={isTransformed} />
           </div>
         </div>
 
@@ -67,21 +55,21 @@ function Header({ onButtonClick, isTransformed }) {
           <nav className="md:hidden mt-4 pb-4 flex flex-col gap-4 border-t pt-4">
             <a 
               href="#home" 
-              className="text-black uppercase font-semibold text-sm tracking-wide hover:text-gray-600 transition-colors"
+              className="text-black uppercase font-black text-sm tracking-wide hover:text-gray-600 transition-colors border-8 border-black px-4 py-2 rounded text-center"
               onClick={() => setMobileMenuOpen(false)}
             >
               Home
             </a>
             <a 
               href="#projects" 
-              className="text-black uppercase font-semibold text-sm tracking-wide hover:text-gray-600 transition-colors"
+              className="text-black uppercase font-black text-sm tracking-wide hover:text-gray-600 transition-colors border-8 border-black px-4 py-2 rounded text-center"
               onClick={() => setMobileMenuOpen(false)}
             >
               Projects
             </a>
             <a 
               href="#contact" 
-              className="text-black uppercase font-semibold text-sm tracking-wide hover:text-gray-600 transition-colors"
+              className="text-black uppercase font-black text-sm tracking-wide hover:text-gray-600 transition-colors border-8 border-black px-4 py-2 rounded text-center"
               onClick={() => setMobileMenuOpen(false)}
             >
               Contact
