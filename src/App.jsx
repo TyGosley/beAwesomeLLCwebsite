@@ -10,24 +10,28 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white relative overflow-hidden">
+      {/* Diagonal Spray-Painted Logo */}
+      <div className="logo-diagonal">
+        <img 
+          src="/beawesome-logo.png" 
+          alt="Be Awesome Productions"
+          className="logo-image-diagonal"
+        />
+      </div>
+
       <Header onButtonClick={handleButtonClick} isTransformed={isTransformed} />
       
-      <main className="pt-32 px-4 sm:px-8">
+      <main className="pt-32 px-4 sm:px-8 relative z-10">
         <div className="max-w-6xl mx-auto text-center">
-          {/* Bubble Graffiti Logo Text */}
-          <h1 className="logo-text text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-8 px-4">
-            Be Awesome Productions
-          </h1>
-          
           {!isTransformed ? (
-            <div className="text-gray-600 text-base sm:text-lg max-w-2xl mx-auto">
-              <p>Welcome to our creative space.</p>
+            <div className="text-gray-800 text-base sm:text-lg max-w-2xl mx-auto bg-white/90 backdrop-blur-sm p-8 rounded-lg shadow-lg">
+              <p className="text-xl font-semibold mb-2">Welcome to our creative space.</p>
               <p className="mt-4">Click the button above to explore our projects.</p>
             </div>
           ) : (
-            <div className="text-gray-600 text-base sm:text-lg max-w-2xl mx-auto">
-              <p>🎉 Background transformation coming soon!</p>
+            <div className="text-gray-800 text-base sm:text-lg max-w-2xl mx-auto bg-white/90 backdrop-blur-sm p-8 rounded-lg shadow-lg">
+              <p className="text-xl font-semibold mb-2">🎉 Background transformation coming soon!</p>
               <p className="mt-4">We'll add the honeycomb effect in the next step.</p>
             </div>
           )}
