@@ -25,7 +25,7 @@ function PulsatingButton({ onClick, isTransformed }) {
   return (
     <motion.button
       onClick={onClick}
-      style={{ scale }}
+      style={{ scale, transformOrigin: 'right center' }}
       animate={{
         backgroundColor: isTransformed 
           ? '#ffffff' // white when showing Reset
@@ -56,7 +56,7 @@ function PulsatingButton({ onClick, isTransformed }) {
       }}
       whileHover={{ scale: scale * 1.1 }}
       whileTap={{ scale: scale * 0.95 }}
-      className="px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-black uppercase text-xs sm:text-sm tracking-wide transition-colors duration-300 border-8 text-black border-black cursor-pointer"
+      className="origin-right px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-black uppercase text-xs sm:text-sm tracking-wide transition-colors duration-300 border-8 text-black border-black cursor-pointer"
     >
       {isTransformed ? 'Reset' : 'Click Here'}
     </motion.button>

@@ -1,11 +1,17 @@
-import { useState } from 'react';
+import { forwardRef, useState } from 'react';
 import PulsatingButton from './PulsatingButton';
 
-function Header({ onButtonClick, isTransformed }) {
+const Header = forwardRef(function Header(
+  { onButtonClick, isTransformed, showCTA = true },
+  ref,
+) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-sm border-b border-gray-200 z-50">
+    <header
+      ref={ref}
+      className="fixed top-0 left-0 right-0 bg-white border-b border-gray-200 z-50"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-8 py-4 sm:py-6">
         <div className="flex items-center justify-between">
           {/* Desktop Navigation */}
@@ -42,12 +48,14 @@ function Header({ onButtonClick, isTransformed }) {
           </button>
 
           {/* Call-to-Action Button */}
-          <div className="flex items-center gap-2 sm:gap-3">
-            {/* <span className="hidden sm:inline text-sm font-black text-gray-700 uppercase tracking-wide">
-              Explore
-            </span> */}
-            <PulsatingButton onClick={onButtonClick} isTransformed={isTransformed} />
-          </div>
+          {showCTA ? (
+            <div className="flex items-center gap-2 sm:gap-3">
+              {/* <span className="hidden sm:inline text-sm font-black text-gray-700 uppercase tracking-wide">
+                Explore
+              </span> */}
+              <PulsatingButton onClick={onButtonClick} isTransformed={isTransformed} />
+            </div>
+          ) : null}
         </div>
 
         {/* Mobile Menu Dropdown */}
@@ -79,6 +87,6 @@ function Header({ onButtonClick, isTransformed }) {
       </div>
     </header>
   );
-}
+});
 
 export default Header;
