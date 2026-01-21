@@ -67,6 +67,122 @@ body {
   --hex-clip: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
 
+@font-face {
+  font-family: 'aAttackGraffiti';
+  src: url('./assets/fonts/aAttackGraffiti.otf') format('opentype'),
+    url('./assets/fonts/aAttackGraffiti.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'FankyBubbleGraffitiExtrude';
+  src: url('./assets/fonts/FankyBubbleGraffiti-Extrude.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'FankyBubbleGraffitiLine';
+  src: url('./assets/fonts/FankyBubbleGraffiti-Line.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'FankyBubbleGraffitiRegular';
+  src: url('./assets/fonts/FankyBubbleGraffiti-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GraffitiDesiderium';
+  src: url('./assets/fonts/Graffiti_desiderium-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'RobinGraffiti';
+  src: url('./assets/fonts/RobinGraffiti.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'RobinGraffitiFilledIn';
+  src: url('./assets/fonts/RobinGraffitiFilledin.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'StreetfunkGraffiti';
+  src: url('./assets/fonts/Streetfunk Graffiti PERSONAL USE ONLY.ttf')
+    format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'VandalBlowInner';
+  src: url('./assets/fonts/Vandal Blow Inner.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'VandalBlowShadow';
+  src: url('./assets/fonts/Vandal Blow Shadow.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'VandalBlowSolid';
+  src: url('./assets/fonts/Vandal Blow Solid.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Vandalust';
+  src: url('./assets/fonts/Vandalust.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Amsterdam';
+  src: url('./assets/fonts/amsterdam.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+.honeycomb-title {
+  font-family: 'aAttackGraffiti', 'Comic Sans MS', 'Trebuchet MS', 'Segoe UI', sans-serif;
+  font-weight: 400;
+  font-size: clamp(2.5rem, 6vw, 6rem);
+  letter-spacing: 0.04em;
+  line-height: 0.9;
+  text-transform: uppercase;
+  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.08);
+}
+
 .hex-clip {
   clip-path: var(--hex-clip);
   -webkit-clip-path: var(--hex-clip);

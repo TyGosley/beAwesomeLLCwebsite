@@ -147,6 +147,9 @@ function HoneycombBackground({
   tileDensity = 0.7,
   maxTiles = 30,
   topOffset = 0,
+  title,
+  titleColor = '#5bcbca',
+  titleClassName = '',
   flipDuration = 0.7,
   flipInterval = 260,
   flipEase = [0.4, 0, 0.2, 1],
@@ -365,8 +368,19 @@ function HoneycombBackground({
         </div>
       )}
 
+      {title ? (
+        <div className="absolute inset-0 z-0 flex items-center justify-center px-6 text-center pointer-events-none">
+          <h1
+            className={`honeycomb-title ${titleClassName}`}
+            style={{ color: titleColor }}
+          >
+            {title}
+          </h1>
+        </div>
+      ) : null}
+
       <motion.div
-        className="absolute inset-0"
+        className="absolute inset-0 z-10"
         initial={false}
         animate={{ opacity: isActive ? 1 : 0 }}
         transition={{ duration: prefersReducedMotion ? 0 : 0.4 }}

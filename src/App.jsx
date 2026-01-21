@@ -4,6 +4,22 @@ import HoneycombBackground from './components/HoneycombBackground';
 import { projects } from './content/projects';
 import './App.css';
 
+const fontPreviews = [
+  { label: 'aAttackGraffiti', fontFamily: 'aAttackGraffiti' },
+  { label: 'FankyBubbleGraffiti-Extrude', fontFamily: 'FankyBubbleGraffitiExtrude' },
+  { label: 'FankyBubbleGraffiti-Line', fontFamily: 'FankyBubbleGraffitiLine' },
+  { label: 'FankyBubbleGraffiti-Regular', fontFamily: 'FankyBubbleGraffitiRegular' },
+  { label: 'Graffiti_desiderium-Regular', fontFamily: 'GraffitiDesiderium' },
+  { label: 'RobinGraffiti', fontFamily: 'RobinGraffiti' },
+  { label: 'RobinGraffitiFilledin', fontFamily: 'RobinGraffitiFilledIn' },
+  { label: 'Streetfunk Graffiti PERSONAL USE ONLY', fontFamily: 'StreetfunkGraffiti' },
+  { label: 'Vandal Blow Inner', fontFamily: 'VandalBlowInner' },
+  { label: 'Vandal Blow Shadow', fontFamily: 'VandalBlowShadow' },
+  { label: 'Vandal Blow Solid', fontFamily: 'VandalBlowSolid' },
+  { label: 'Vandalust', fontFamily: 'Vandalust' },
+  { label: 'Amsterdam', fontFamily: 'Amsterdam' },
+];
+
 function App() {
   const [isTransformed, setIsTransformed] = useState(false);
   const [headerHeight, setHeaderHeight] = useState(0);
@@ -44,6 +60,8 @@ function App() {
         borderColor="#111111"
         projectBackColor="#5bcbca"
         topOffset={headerHeight}
+        title="Be Awesome Productions"
+        titleColor="#5bcbca"
       />
 
       {/* Diagonal Spray-Painted Logo */}
@@ -62,7 +80,28 @@ function App() {
         showCTA
       />
       
-      <main className="pt-32 px-4 sm:px-8 relative z-10" />
+      <main className="pt-32 px-4 sm:px-8 relative z-10">
+        <section className="mx-auto max-w-6xl">
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {fontPreviews.map(font => (
+              <div
+                key={font.fontFamily}
+                className="rounded-2xl border-2 border-black bg-white/90 p-4 shadow-lg"
+              >
+                <div className="text-xs font-semibold uppercase tracking-wider text-gray-500">
+                  {font.label}
+                </div>
+                <div
+                  className="mt-2 text-center text-2xl sm:text-3xl"
+                  style={{ fontFamily: font.fontFamily }}
+                >
+                  Be Awesome Productions
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+      </main>
     </div>
   );
 }
