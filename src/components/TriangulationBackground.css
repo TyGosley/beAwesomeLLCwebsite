@@ -1,0 +1,134 @@
+.triangulation-scene {
+  position: fixed;
+  inset: 0;
+  background: #000;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.triangulation-svg svg {
+  height: 140%;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: -100px;
+}
+
+.triangulation-title-block {
+  position: absolute;
+  left: 50%;
+  top: 45%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.triangulation-title {
+  color: #fff;
+  text-align: center;
+  font-family: 'Lato', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  letter-spacing: 5px;
+  font-weight: 400;
+}
+
+.triangulation-scene.is-active #top .st48,
+.triangulation-scene.is-active #top .st52,
+.triangulation-scene.is-active #top .st50 {
+  animation: drift-right-up 80s alternate;
+}
+
+.triangulation-scene.is-active #top .st33,
+.triangulation-scene.is-active #top .st51 {
+  animation: drift-right-up 75s alternate;
+}
+
+.triangulation-scene.is-active #top .st49,
+.triangulation-scene.is-active #top .st42 {
+  animation: drift-right-up 65s alternate;
+}
+
+.triangulation-scene.is-active #bottom .st11,
+.triangulation-scene.is-active #bottom .st56 {
+  animation: drift-down 70s alternate;
+}
+
+.triangulation-scene.is-active #bottom .st53,
+.triangulation-scene.is-active #bottom .st54 {
+  animation: drift-right 195s alternate;
+}
+
+.triangulation-scene.is-active #bottom .st55,
+.triangulation-scene.is-active #bottom .st36,
+.triangulation-scene.is-active #bottom .st33 {
+  animation: drift-down 115s alternate;
+}
+
+.triangulation-scene.is-active #bottom .st51 {
+  animation: drift-down-right 105s alternate;
+}
+
+.triangulation-scene.is-active #nearright .st40,
+.triangulation-scene.is-active #nearright .st43,
+.triangulation-scene.is-active #nearright .st33 {
+  animation: drift-right 115s;
+}
+
+.triangulation-scene.is-active #nearright .st41,
+.triangulation-scene.is-active #nearright .st44 {
+  animation: drift-right-up 105s;
+}
+
+.triangulation-scene.is-active #nearright .st42,
+.triangulation-scene.is-active #nearright .st45,
+.triangulation-scene.is-active #nearright .st46,
+.triangulation-scene.is-active #nearright .st55,
+.triangulation-scene.is-active #nearright .st47 {
+  animation: drift-right 135s;
+}
+
+.triangulation-scene.is-active #farright .st54,
+.triangulation-scene.is-active #farright .st58,
+.triangulation-scene.is-active #farright .st59 {
+  animation: drift-right 55s;
+}
+
+.triangulation-scene.is-active #farright .st57,
+.triangulation-scene.is-active #farright .st51 {
+  animation: drift-right-up 40s;
+}
+
+@keyframes drift-right {
+  100% {
+    transform: translate(2000px, -20px);
+  }
+}
+
+@keyframes drift-right-up {
+  100% {
+    transform: translate(2000px, -250px);
+  }
+}
+
+@keyframes drift-up {
+  100% {
+    transform: translate(10px, -1450px);
+  }
+}
+
+@keyframes drift-up-right {
+  100% {
+    transform: translate(175px, -1550px);
+  }
+}
+
+@keyframes drift-down {
+  100% {
+    transform: translate(2000px, 1220px);
+  }
+}
+
+@keyframes drift-down-right {
+  100% {
+    transform: translate(1450px, 320px);
+  }
+}

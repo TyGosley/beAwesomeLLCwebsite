@@ -18,6 +18,21 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+
+.triangulation-logo {
+  position: absolute;
+  right: clamp(1.5rem, 4vw, 3rem);
+  width: clamp(120px, 14vw, 210px);
+  opacity: 0.92;
+  filter: drop-shadow(0 10px 24px rgba(0, 0, 0, 0.7));
+}
+
+@media (max-width: 640px) {
+  .triangulation-logo {
+    width: clamp(96px, 28vw, 160px);
+  }
+}
+
 /* Diagonal Spray-Painted Logo - spans from bottom-left to top-right */
 .logo-diagonal {
   position: fixed;
@@ -76,13 +91,6 @@ body {
   font-display: swap;
 }
 
-@font-face {
-  font-family: 'FankyBubbleGraffitiExtrude';
-  src: url('./assets/fonts/FankyBubbleGraffiti-Extrude.otf') format('opentype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
 
 @font-face {
   font-family: 'FankyBubbleGraffitiLine';
@@ -133,13 +141,6 @@ body {
   font-display: swap;
 }
 
-@font-face {
-  font-family: 'VandalBlowInner';
-  src: url('./assets/fonts/Vandal Blow Inner.otf') format('opentype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
 
 @font-face {
   font-family: 'VandalBlowShadow';
