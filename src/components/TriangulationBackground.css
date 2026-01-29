@@ -1,10 +1,25 @@
 .triangulation-scene {
   position: fixed;
   inset: 0;
-  background: #000;
+  background: var(--triangulation-bg);
+  --triangulation-bg: #15121c;
+  --triangulation-purple-1: #2a1f30;
+  --triangulation-purple-2: #3a2b41;
+  --triangulation-purple-3: #4a3656;
+  --triangulation-purple-4: #5b3f6b;
+  --triangulation-purple-5: #744884;
+  --triangulation-purple-6: #9b6aad;
+  --triangulation-purple-7: #d7c1e8;
   overflow: hidden;
   z-index: 0;
   pointer-events: none;
+}
+
+.triangulation-svg {
+  position: absolute;
+  inset: 0;
+  transform: translateX(120px) scaleX(-1);
+  transform-origin: center;
 }
 
 .triangulation-svg svg {
@@ -12,7 +27,104 @@
   display: block;
   position: absolute;
   left: 0;
-  top: -100px;
+  top: 0;
+  transform: rotate(90deg) translateY(-100%);
+  transform-origin: top left;
+  filter: none;
+}
+
+.triangulation-svg svg [class^='st'] {
+  stroke: none !important;
+}
+
+.triangulation-svg svg .st0,
+.triangulation-svg svg .st7,
+.triangulation-svg svg .st14,
+.triangulation-svg svg .st21,
+.triangulation-svg svg .st28,
+.triangulation-svg svg .st35,
+.triangulation-svg svg .st42,
+.triangulation-svg svg .st49,
+.triangulation-svg svg .st56 {
+  fill: var(--triangulation-purple-1) !important;
+}
+
+.triangulation-svg svg .st1,
+.triangulation-svg svg .st8,
+.triangulation-svg svg .st15,
+.triangulation-svg svg .st22,
+.triangulation-svg svg .st29,
+.triangulation-svg svg .st36,
+.triangulation-svg svg .st43,
+.triangulation-svg svg .st50,
+.triangulation-svg svg .st57 {
+  fill: var(--triangulation-purple-2) !important;
+}
+
+.triangulation-svg svg .st2,
+.triangulation-svg svg .st9,
+.triangulation-svg svg .st16,
+.triangulation-svg svg .st23,
+.triangulation-svg svg .st30,
+.triangulation-svg svg .st37,
+.triangulation-svg svg .st44,
+.triangulation-svg svg .st51,
+.triangulation-svg svg .st58 {
+  fill: var(--triangulation-purple-3) !important;
+}
+
+.triangulation-svg svg .st3,
+.triangulation-svg svg .st10,
+.triangulation-svg svg .st17,
+.triangulation-svg svg .st24,
+.triangulation-svg svg .st31,
+.triangulation-svg svg .st38,
+.triangulation-svg svg .st45,
+.triangulation-svg svg .st52,
+.triangulation-svg svg .st59 {
+  fill: var(--triangulation-purple-4) !important;
+}
+
+.triangulation-svg svg .st4,
+.triangulation-svg svg .st11,
+.triangulation-svg svg .st18,
+.triangulation-svg svg .st25,
+.triangulation-svg svg .st32,
+.triangulation-svg svg .st39,
+.triangulation-svg svg .st46,
+.triangulation-svg svg .st53 {
+  fill: var(--triangulation-purple-5) !important;
+}
+
+.triangulation-svg svg .st5,
+.triangulation-svg svg .st12,
+.triangulation-svg svg .st19,
+.triangulation-svg svg .st26,
+.triangulation-svg svg .st33,
+.triangulation-svg svg .st40,
+.triangulation-svg svg .st47,
+.triangulation-svg svg .st54 {
+  fill: var(--triangulation-purple-6) !important;
+}
+
+.triangulation-svg svg .st6,
+.triangulation-svg svg .st13,
+.triangulation-svg svg .st20,
+.triangulation-svg svg .st27,
+.triangulation-svg svg .st34,
+.triangulation-svg svg .st41,
+.triangulation-svg svg .st48,
+.triangulation-svg svg .st55 {
+  fill: var(--triangulation-purple-7) !important;
+}
+
+.triangulation-svg svg .st8,
+.triangulation-svg svg .st28,
+.triangulation-svg svg .st33,
+.triangulation-svg svg .st34,
+.triangulation-svg svg .st45,
+.triangulation-svg svg .st51 {
+  fill: none !important;
 }
 
 .triangulation-title-block {
@@ -24,7 +136,7 @@
 }
 
 .triangulation-title {
-  color: #fff;
+  color: #f2eef7;
   text-align: center;
   font-family: 'Lato', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   letter-spacing: 5px;
